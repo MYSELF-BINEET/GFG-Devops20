@@ -11,12 +11,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo
+      app: mongo   # this is used for k8s detects it and scaling it or others internal thisngs
   template:
     metadata:
       name: mongodb
       labels:
-        app: mongo
+        app: mongo   # this is for service or anything connects with that with label.app:mongo ... in k8s cluster
     spec:
       containers:
       - name: mongo-db
