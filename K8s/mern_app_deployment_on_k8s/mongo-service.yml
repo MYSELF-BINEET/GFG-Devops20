@@ -4,7 +4,7 @@ metadata:
   name: mongo-service
 spec:
   selector:
-    app: mongo
+    app: mongo  # this selctor selects template.metadata.labels app:mongo ..... for connect all the pods 
   type: ClusterIP
   ports:
     - protocol: TCP
